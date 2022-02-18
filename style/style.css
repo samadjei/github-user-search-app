@@ -1,0 +1,385 @@
+:root {
+	/* Light Mode */
+	--colour-1: #0079ff;
+	--colour-2: #697c9a;
+	--colour-3: #4b6a9b;
+	--colour-4: #2b3442;
+	--colour-5: #f6f8ff;
+	--colour-6: #fefefe;
+
+	/* Dark Mode */
+	--colour-7: #1e2a47;
+	--colour-8: #141d2f;
+	--colour-9: #ffffff;
+	--colour-10: #f74646;
+	--colour-11: #222731;
+
+	/* Text */
+	--font: 'Space Mono', monospace;
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+
+	--border-radius: 1.5rem;
+}
+
+[data-theme='dark'] {
+	background: var(--color-9);
+	color: var(--text);
+}
+
+[data-theme='light'] #theme {
+	background: var(--color-8);
+	color: var(--text);
+}
+
+.light {
+	--main-background: var(--colour-5);
+	--container-field: var(--colour-6);
+	--input-text: var(--colour-3);
+	--search-btn: var(--colour-1);
+	--btn-text: var(--colour-9);
+	--stats-background: var(--colour-5);
+
+	--container: var(--colour-6);
+	--text: var(--colour-3);
+	--main-detail: var(--colour-5);
+	--error: var(--colour-10);
+	--logo: var(--colour-11);
+	--social: var(--colour-4);
+	transition: all 0.3s ease-in;
+}
+
+.dark {
+	--main-background: var(--colour-8);
+	--container-field: var(--colour-7);
+	--input-text: var(--colour-9);
+	--search-btn: var(--colour-1);
+	--btn-text: var(--colour-9);
+	--stats-background: var(--colour-8);
+
+	--container: var(--colour-7);
+	--text: var(--colour-9);
+	--main-detail: var(--colour-8);
+	--error: var(--colour-10);
+	--logo: var(--colour-9);
+	--social: var(--colour-9);
+	transition: all 0.3s ease-in;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--font);
+	background: var(--main-background);
+	color: var(--text);
+	font-size: 16px;
+	height: 100vh;
+}
+
+a {
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+	width: 73rem;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 2rem;
+	overflow: hidden;
+}
+
+.p-top {
+	padding-top: 14.4rem;
+}
+
+/* Top */
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	color: var(--logo);
+	font-size: 2.6rem;
+	font-weight: var(--font-weight-bold);
+	line-height: 3.9rem;
+}
+
+.theme-switcher {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	cursor: pointer;
+}
+
+/* Input */
+.finder {
+	position: relative;
+}
+
+.search-icon {
+	position: absolute;
+	top: 6rem;
+	left: 3rem;
+}
+
+[type='text'] {
+	border: none;
+	border-radius: var(--border-radius);
+	width: 100%;
+	height: 6.9rem;
+	background: var(--container-field);
+	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+	padding-left: 8rem;
+	margin-top: 3.6rem;
+	margin-bottom: 2.4rem;
+	color: var(--input-text);
+	font-size: 1.8rem;
+	line-height: 2.5rem;
+	cursor: pointer;
+}
+
+[type='text']::placeholder {
+	color: var(--input-text);
+	font-size: 1.8rem;
+	line-height: 2.5rem;
+}
+
+.btn {
+	display: inline-block;
+	border: none;
+	width: 10.6rem;
+	height: 5rem;
+	background: var(--search-btn);
+	cursor: pointer;
+	border-radius: var(--border-radius);
+	color: var(--btn-text);
+	position: absolute;
+	bottom: 3.25rem;
+	right: 1rem;
+	z-index: 1;
+}
+
+/* Details */
+.github {
+	background: var(--container);
+	padding: 4.8rem;
+	border-radius: var(--border-radius);
+}
+.github-top {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	max-width: 100%;
+}
+
+.github-profile {
+	min-width: 11.7rem;
+	height: 11.7rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.github-user {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 3.7rem;
+}
+
+.hide-desktop {
+	display: none;
+}
+
+.github-bio {
+	padding-top: 2rem;
+	font-size: 15px;
+	line-height: 25px;
+	opacity: 0.75;
+	flex-grow: 100%;
+	padding-bottom: 3.2rem;
+}
+.github-left {
+	display: flex;
+	gap: 3.7rem;
+}
+
+.github-username {
+	color: var(--search-btn);
+}
+
+/* Stats */
+.github-stats {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 9.9rem;
+	background: var(--stats-background);
+	width: 48rem;
+	padding: 1.5rem;
+	margin-left: auto;
+	border-radius: var(--border-radius);
+}
+
+.github-sub {
+	font-size: 1.3rem;
+}
+
+.github-sub-numbers {
+	font-size: 2.2rem;
+	font-weight: var(--font-weight-bold);
+}
+
+/* Extra */
+.github-extra {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1.9rem;
+	width: 48rem;
+	margin-left: auto;
+	padding-top: 3.7rem;
+}
+
+.extra-inner {
+	display: flex;
+	align-items: center;
+}
+
+.github-icons {
+	margin-right: 1.6rem;
+}
+
+.location {
+	margin-right: 1.912rem;
+}
+
+.error {
+	display: none;
+	position: absolute;
+	bottom: 4.25rem;
+	right: 14rem;
+	color: var(--error);
+}
+
+.error.active {
+	display: block;
+}
+
+@media screen and (max-width: 76.8rem) {
+	.container {
+		width: 57.3rem;
+	}
+	/* Search icon */
+	.finder::after {
+		right: 23rem;
+	}
+
+	.github-user {
+		flex-direction: column;
+	}
+
+	.github-stats {
+		width: 100%;
+	}
+
+	.hide-tablet {
+		display: none;
+	}
+	.hide-desktop {
+		display: block;
+		padding-bottom: 3.2rem;
+	}
+}
+
+@media screen and (max-width: 50rem) {
+	.github-bio {
+		padding-bottom: 2.3rem;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	[type='text']::placeholder {
+		font-size: 1.3rem;
+	}
+
+	.search-icon {
+		left: 1rem;
+	}
+
+	.github {
+		padding: 2.4rem;
+	}
+	/* Search icon */
+	.finder::after {
+		right: 17rem;
+	}
+
+	[type='text'] {
+		padding-left: 4.5rem;
+	}
+
+	.github-profile {
+		min-width: 7rem;
+		height: 7rem;
+	}
+
+	.github-name {
+		font-size: 1.6rem;
+	}
+
+	.github-extra {
+		width: 100%;
+	}
+
+	.github-username,
+	.github-date,
+	.github-bio {
+		font-size: 1.3rem;
+	}
+
+	.github-stats {
+		width: 100%;
+		grid-gap: 3rem;
+	}
+
+	.github-sub-numbers {
+		font-size: 1.6rem;
+		font-weight: var(--font-weight-bold);
+	}
+
+	.hide-tablet {
+		display: none;
+	}
+	.hide-desktop {
+		display: block;
+		padding-bottom: 3.2rem;
+	}
+
+	.github-extra {
+		grid-template-columns: 1fr;
+	}
+
+	.github-info {
+		font-size: 1.3rem;
+	}
+}
